@@ -1,0 +1,30 @@
+<h1>Instructions for use of OpenSSL 1.0.2</h1>
+<p>Use the OSS command<br/>
+&nbsp;&nbsp;<code>tar xzf openssl-<i>package</i>.tar.gz -C / -p --no-same-user</code><br/>
+to install OpenSSL. You must install the package in the exact same location as
+in the tar file. Add the <code>/usr/local/lib</code> to your _RLD_LIB_PATH variable when
+OpenSSL 1.0.2 is needed. Other versions of OpenSSL should be installed
+elsewhere.</p>
+<p>
+Due to new features added in the latest OSS System Libraries, binaries built
+with those will not function correctly on older RVUs.   The following table
+lists the minimum RVU for each platform that can correctly run git
+version 1.0.2u, and above:</p>
+<table>
+<tr>
+  <td><b>Platform</b></td>
+  <td><b>Minimum RVU</b></td>
+</tr>
+  <td>TNS/E</td>
+  <td>J06.22</td>
+<tr>
+  <td>TNS/X</td>
+  <td>L19.08</td>
+</tr>
+<tr>
+  <td>TNS/V</td>
+  <td>L19.08</td>
+</tr>
+</table>
+<p><b>Note:</b> The OpenSSL team has deprecated version 1.0.2u as of December
+2019. Security patches are no longer being created for that version.</p>

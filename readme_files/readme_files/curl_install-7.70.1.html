@@ -1,0 +1,27 @@
+<h1>Instructions for use of curl versions 7.70.0 and above</h1>
+<p>Use the OSS command<br/>
+&nbsp;&nbsp;<code>tar xzf curl-<i>package</i>.tar.gz -C /usr/local -p --no-same-user</code><br/>
+to install curl. Make sure to have the directory containing the OpenSSL 1.0.2
+version of libcrypt.so in your _RLD_LIB_PATH variable when curl is used.</p>
+<p>
+Due to new features added in the latest OSS System Libraries, binaries built
+with those will not function correctly on older RVUs.   The following table
+lists the minimum RVU for each platform that can correctly run curl
+version 7.70.1, and above:</p>
+<table>
+<tr>
+  <td><b>Platform</b></td>
+  <td><b>Minimum RVU</b></td>
+</tr>
+  <td>TNS/E</td>
+  <td>J06.22</td>
+<tr>
+  <td>TNS/X</td>
+  <td>L19.08</td>
+</tr>
+<tr>
+  <td>TNS/V</td>
+  <td>L19.08</td>
+</tr>
+</table>
+

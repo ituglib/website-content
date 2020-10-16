@@ -1,0 +1,32 @@
+<h1>Instructions for use of OpenSSL 1.1.1 (SPT Library)</h1>
+<p>Use the OSS command<br/>
+&nbsp;&nbsp;<code>tar xzf openssl-<i>package</i>.tar.gz -C / -p --no-same-user</code><br/>
+to install OpenSSL. You must install the package in the exact same location as
+in the tar file. Add the <code>/usr/local-ssl1.1_spt/lib</code> to your _RLD_LIB_PATH variable when
+OpenSSL 1.1.1 SPT is needed. Other versions of OpenSSL should be installed
+elsewhere.</p>
+<p>
+Due to new features added in the latest OSS System Libraries, binaries built
+with those will not function correctly on older RVUs.   The following table
+lists the minimum RVU for each platform that can correctly run git
+version 1.1.1g, and above:</p>
+<table>
+<tr>
+  <td><b>Platform</b></td>
+  <td><b>Minimum RVU</b></td>
+</tr>
+  <td>TNS/E</td>
+  <td>J06.22</td>
+<tr>
+  <td>TNS/X</td>
+  <td>L19.08</td>
+</tr>
+<tr>
+  <td>TNS/V</td>
+  <td>L19.08</td>
+</tr>
+</table>
+<p><b>Caution: </b>Do not mix versions of OpenSSL. There is no binary
+compatibility between version 1.0.2 and 1.1.1 of OpenSSL. The first directory
+encountered in _RLD_LIB_PATH is selected by the OSS loader. Do not use a
+threaded library with an unthreaded program and vice versa.</p>

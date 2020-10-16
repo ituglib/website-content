@@ -1,0 +1,47 @@
+<h1>Instructions for use of GMAKE 4.1g and above:</h1>
+
+<p>Upload the <code>gmake-<i>package</i>.pak.bin</code> file to GUARDIAN in
+binary. The file can be named anything in GUARDIAN, typically
+<code>gmakepak</code>.</p>
+
+<p>Change the file code of the binary file to 1729 as follows:<br/>
+&nbsp;&nbsp;<code>FUP ALTER gmakepak,CODE 1729</code></p>
+
+<p>Run the UNPAK utility to install the GMAKE object in your desired
+location:<br/>
+&nbsp;&nbsp;<code>UNPAK gmakepak,*.*.*,listall,myid,vol $myvol.subvol,tapedate</code></p>
+
+<p>Secure the GMAKE object based on your system's needs:<br/>
+&nbsp;&nbsp;<code>FUP SECURE gmake,"NCNC"</p>
+
+<p>The files in the PAK archive default to being owned by SUPER.SUPER and
+secured "NUNU".</p>
+
+<p>
+Due to new features added in the latest Native Libraries, binaries built
+with those may not function correctly on older RVUs. The following table
+lists the minimum RVU for each platform that can correctly run gmake
+version 4.1g, and above:</p>
+<table>
+<tr>
+  <td><b>Platform</b></td>
+  <td><b>Minimum RVU</b></td>
+</tr>
+  <td>TNS/E</td>
+  <td>J06.22</td>
+<tr>
+  <td>TNS/X</td>
+  <td>L19.08</td>
+</tr>
+<tr>
+  <td>TNS/V</td>
+  <td>L19.08</td>
+</tr>
+</table>
+<p>If you require new features or bug fixes and your system is older than the
+above RVUs, you may have to download the source package from GitHub and build the new version
+yourself.  This requires experience with building open source tools on OSS.</p>
+
+<p>The source repository for GMake currently resides at: <a href="https://github.com/ituglib/gmake">https://github.com/ituglib/gmake</a>. If you find any
+issues, want new features, and wish to contribute, you can do so using
+the GitHub site.</p>

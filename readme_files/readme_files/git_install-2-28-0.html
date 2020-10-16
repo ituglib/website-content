@@ -1,0 +1,32 @@
+<h1>Instructions for use of git versions 2.28.0 and above</h1>
+<p>Use the OSS command<br/>
+&nbsp;&nbsp;<code>tar xzf git-<i>package</i>.tar.gz -C /usr/local -p --no-same-user</code><br/>
+to install git. Make sure to have the directory containing the OpenSSL 1.0.2
+version of libcrypt.so in your _RLD_LIB_PATH variable when git is used.</p>
+<p>
+Due to new features added in the latest OSS System Libraries, binaries built
+with those will not function correctly on older RVUs.   The following table
+lists the minimum RVU for each platform that can correctly run git
+version 2.28.0, and above:</p>
+<table>
+<tr>
+  <td><b>Platform</b></td>
+  <td><b>Minimum RVU</b></td>
+</tr>
+  <td>TNS/E</td>
+  <td>J06.22</td>
+<tr>
+  <td>TNS/X</td>
+  <td>L19.08</td>
+</tr>
+<tr>
+  <td>TNS/V</td>
+  <td>L19.08</td>
+</tr>
+</table>
+<p>If you require new features or bug fixes that were released after 2.16.2.9,
+you will have to download the source package and build the new version
+yourself.  This requires experience with FLOSS and with building open source
+tools on OSS.</p>
+<p>If you don't need these new features you should continue to use version 2.16.2.9 instead of the latest version.</p>
+
